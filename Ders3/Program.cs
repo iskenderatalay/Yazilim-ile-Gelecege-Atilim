@@ -232,7 +232,7 @@ namespace Ders3
             /*
             Console.WriteLine("Dizi Elamanlarinin En Kucugu = " + sayilar.Min());
             Console.WriteLine("Dizi Elamanlarinin En Buyugu = " + sayilar.Max());
-            */
+            */ 
         }
     }
 }
