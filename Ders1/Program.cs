@@ -138,7 +138,7 @@ namespace Ders1
             */
 
             /*
-             * 50den kucuk tek sayilarin carpimi
+            //50den kucuk tek sayilarin carpimi
 
             double carp = 1;
             for (int i = 1; i < 20; i++)
