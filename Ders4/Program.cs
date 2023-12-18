@@ -190,7 +190,7 @@ namespace Ders4
             */
 
             string[] isimler = { "ali", "veli", "hayri" };
-                Yaz("Isimler", isimler);
+                Yaz("Isimler", isimler); 
         }
     }
 }
