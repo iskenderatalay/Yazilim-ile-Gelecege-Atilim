@@ -206,7 +206,7 @@ namespace Ders1
                     break;
                 default:
                     Console.WriteLine("yok");
-                    break;
+                    break; 
             }
         }
     }
