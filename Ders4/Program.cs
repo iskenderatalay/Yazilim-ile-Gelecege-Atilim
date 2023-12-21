@@ -32,6 +32,7 @@ namespace Ders4
 
         /*
         //asiri Yukleme Overload
+
         public static int Topla()
         {
             int x = 10; int y = 20;
@@ -47,6 +48,7 @@ namespace Ders4
 
         /*
         //metotlarda dizi kullanimi
+
         public static void Yaz(int[] dizi)
         {
             foreach (int i in dizi)
