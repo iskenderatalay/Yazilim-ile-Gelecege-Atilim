@@ -49,8 +49,7 @@ namespace Ders5
             return fak;
         }
         */
-
-       
+               
         public static void kokHesapla(double k1, double k2, double k3)
         {
             double delta=(k2*k2)-(4*k1*k3);
