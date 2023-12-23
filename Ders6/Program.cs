@@ -8,7 +8,6 @@ namespace Ders6
 {
     internal class Program
     {
-
         static void Main(string[] args)
         {
             Ogrenci ogrenci = new Ogrenci();
@@ -56,7 +55,8 @@ namespace Ders6
             /*
             Sinema s = new Sinema("Salon1", 40);
             */
-
+            
+            /*
             Sinema s = new Sinema("Salon1", 4);
             s.BiletSat(false);
             s.BiletSat(true);
@@ -70,9 +70,30 @@ namespace Ders6
             s.BiletIptal(false);
             Console.WriteLine("Bakiye = " + s.BakiyeOgren());
             Console.WriteLine("Bos Koltuk Sayisi = " + s.BosKoltukOgren());
+            */
 
-            /*Odev
+            //Odev
             //bunu otobus ornegi uzerinde uygula
+
+            Otobus otobus1 = new Otobus("Otobus 1", 20);
+            Console.WriteLine("Bakiye = " + otobus1.BakiyeOgren());
+            Console.WriteLine("Bos koltuk sayisi = " + otobus1.BosKoltukOgren());
+            Console.WriteLine("-------------------------------");
+
+            otobus1.BiletSat(true);
+            otobus1.BiletSat(true);
+            otobus1.BiletSat(true);
+            otobus1.BiletSat(true);
+
+            otobus1.BiletSat(false);
+            otobus1.BiletSat(false);
+
+            otobus1.BiletIptal(true);
+            otobus1.BiletIptal(false);
+
+            Console.WriteLine("Bakiye = " + otobus1.BakiyeOgren());
+            Console.WriteLine("Bos koltuk sayisi = " + otobus1.BosKoltukOgren());
+            Console.WriteLine("Satilan koltuk sayisi = " + otobus1.SatilanKoltukOgren());
         }
     }
 }
