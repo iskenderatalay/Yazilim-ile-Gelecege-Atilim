@@ -55,7 +55,7 @@ namespace Ders6
             /*
             Sinema s = new Sinema("Salon1", 40);
             */
-            
+
             /*
             Sinema s = new Sinema("Salon1", 4);
             s.BiletSat(false);
@@ -75,25 +75,35 @@ namespace Ders6
             //Odev
             //bunu otobus ornegi uzerinde uygula
 
-            Otobus otobus1 = new Otobus("Otobus 1", 20);
-            Console.WriteLine("Bakiye = " + otobus1.BakiyeOgren());
-            Console.WriteLine("Bos koltuk sayisi = " + otobus1.BosKoltukOgren());
-            Console.WriteLine("-------------------------------");
+            Otobus otobus = new Otobus("Metro", 40, "Pazartesi", "15.00", "81FB890", 
+                "Duzce-Istanbul", "Berceste", 400, 600);
 
-            otobus1.BiletSat(true);
-            otobus1.BiletSat(true);
-            otobus1.BiletSat(true);
-            otobus1.BiletSat(true);
+            Console.WriteLine("Otobus Firmasi = " + otobus.firmaAd);
+            Console.WriteLine("Otobus Hareket Saati = " + otobus.saat);
+            Console.WriteLine("Otobus Kapasitesi = " + otobus.toplamKoltukSayisi);
+            Console.WriteLine("--------------------------------------------");
 
-            otobus1.BiletSat(false);
-            otobus1.BiletSat(false);
+            otobus.BiletSat(true);
+            otobus.BiletSat(true);
+            otobus.BiletSat(true);
+            otobus.BiletSat(false);
+            otobus.BiletSat(false);
+            otobus.BiletSat(false);
 
-            otobus1.BiletIptal(true);
-            otobus1.BiletIptal(false);
+            otobus.KazancOgren();
+            otobus.BosKoltukOgren();
 
-            Console.WriteLine("Bakiye = " + otobus1.BakiyeOgren());
-            Console.WriteLine("Bos koltuk sayisi = " + otobus1.BosKoltukOgren());
-            Console.WriteLine("Satilan koltuk sayisi = " + otobus1.SatilanKoltukOgren());
+            /*otobus.molaYer = "Yeni duraklama yeri";
+            Console.WriteLine("Mola yer = " + otobus.molaYer);
+            */
+
+            Console.WriteLine("--------------------------------------------");
+            otobus.BiletIptal(true);  
+            otobus.BiletIptal(false);
+
+            otobus.KazancOgren();
+            otobus.IptalOgren();
+            otobus.BosKoltukOgren();
         }
     }
 }

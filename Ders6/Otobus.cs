@@ -10,65 +10,83 @@ namespace Ders6
     {
         public int bosKoltukSayisi;
         public int toplamKoltukSayisi;
-        public int bakiye;
-        public int ogrenci = 5;
-        public int sivil = 15;
-        public int satilanKoltukSayisi;
+        public int kazanc = 0;
+        public int indirimli;
+        public int tam;
+        public int iptalSayisi = 0;
 
-        public string otobusNo;
+        public string firmaAd;
+        public string gun;
+        public string saat;
+        public string plaka;
+        public string guzergah;
+        public string molaYer;
 
-        public Otobus(string otobusNo, int koltukSayisi)
+        public Otobus(string firmaAd, int koltukSayisi, string gun, string saat, string plaka,
+            string guzergah, string molaYer, int indirimli, int tam)
         {
-            this.otobusNo = otobusNo;
+            this.firmaAd = firmaAd;
             toplamKoltukSayisi = koltukSayisi;
             bosKoltukSayisi = koltukSayisi;
-            bakiye = 0;
-            satilanKoltukSayisi = 0;
-            Console.WriteLine(otobusNo + " bos koltuk sayisi = " + bosKoltukSayisi);
+            this.gun = gun;
+            this.saat = saat;
+            this.plaka = plaka;
+            this.guzergah = guzergah;
+            this.molaYer = molaYer;
+            this.indirimli = indirimli;
+            this.tam = tam;
         }
 
-        public void BiletSat(bool ogrenciMi)
+        public void BiletSat(bool indirimliMi)
         {
             if (bosKoltukSayisi > 0)
             {
-                satilanKoltukSayisi++;
                 bosKoltukSayisi--;
-                if(ogrenciMi)
+                if (indirimliMi)
                 {
-                    bakiye = bakiye + ogrenci ;
+                    kazanc = kazanc + indirimli;
+                    Console.WriteLine("1 adet indirimli bilet sattin");
                 }
                 else
                 {
-                    bakiye = bakiye + sivil ;
+                    kazanc = kazanc + tam;
+                    Console.WriteLine("1 adet tam bilet sattin");
                 }
             }
             else
-                Console.WriteLine("Bos Koltuk Yok");
+                Console.WriteLine("Bilet Kalmadi");
         }
 
-        public void BiletIptal(bool ogrenciMi)
+        public void BiletIptal(bool indirimliMi)
         {
-            satilanKoltukSayisi--;
+            iptalSayisi++;
             bosKoltukSayisi++;
-            if (ogrenciMi)
+            if (indirimliMi)
             {
-                bakiye = bakiye - ogrenci;
+                kazanc = kazanc -indirimli;
+                Console.WriteLine("1 adet indirimli bilet iade edildi");
             }
             else
-                bakiye = bakiye - sivil;
+            {
+                kazanc = kazanc - tam;
+                Console.WriteLine("1 adet tam bilet iade edildi");
+            }
         }
 
-        public int BosKoltukOgren()
+        public void KazancOgren()
         {
-            return bosKoltukSayisi;
+            Console.WriteLine("Kazanc = " + kazanc);
         }
-        public int SatilanKoltukOgren()
+
+        public void BosKoltukOgren()
         {
-            return satilanKoltukSayisi;
+            Console.WriteLine("Bos Koltuk Sayisi = " + bosKoltukSayisi);
+            Console.WriteLine("Satilan Bilet Sayisi = " + (toplamKoltukSayisi - bosKoltukSayisi));
         }
-        public int BakiyeOgren()
+
+        public void IptalOgren()
         {
-            return bakiye;
+            Console.WriteLine("Iade Edilen Bilet Sayisi = " + iptalSayisi);
         }
     }
 }
