@@ -119,7 +119,7 @@ namespace Ders5
             */
 
             /*
-            //kullanicidan alinan sayinin faktoriyelini geri donduren fonk
+            //kullanicidan alinan sayinin faktoriyelini geri donduren fonksiyon
             
             Console.WriteLine("Faktoriyel alinacak sayiyi gir = ");
             int sayi = Convert.ToInt32(Console.ReadLine());
