@@ -44,7 +44,6 @@ namespace Ders8
             */
 
             /*
-        
             Ogrenci ogr = new Ogrenci();
 
             Console.WriteLine("Ogrenci adini giriniz ");
