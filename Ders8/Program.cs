@@ -131,7 +131,15 @@ namespace Ders8
 
             /*
             //Ogrenci Guncelleme 
+
             o.OgrenciGuncelle(8, "Deneme", "Hahaha");
+            */
+
+            /*
+            //Ders Guncelleme 
+
+            d.DersGuncelle(2, "Bm909", "SanalDunya");
+            d.DersListele();
             */
         }
     }

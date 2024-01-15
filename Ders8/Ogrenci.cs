@@ -51,7 +51,7 @@ namespace Ders8
             OBSContext context = new OBSContext();
             context.Ogrenci.Add(ogrenci);
             context.SaveChanges();
-            Console.WriteLine("Basariyla Eklendi");
+            Console.WriteLine("Ogrenci Basariyla Eklendi");
         }
 
         public void OgrenciGuncelle(int OgrID, string OgrAd, string OgrSoyad)
@@ -61,7 +61,7 @@ namespace Ders8
             ogrGuncel.Ad = OgrAd;
             ogrGuncel.Soyad = OgrSoyad;
             context.SaveChanges();
-            Console.WriteLine("Basariyla Guncellendi");
+            Console.WriteLine("Ogrenci Basariyla Guncellendi");
         }
     }
 }

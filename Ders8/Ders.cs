@@ -43,7 +43,7 @@ namespace Ders8
             OBSContext context = new OBSContext();
             context.Ders.Add(ders);
             context.SaveChanges();
-            Console.WriteLine("Basariyla Eklendi");
+            Console.WriteLine("Ders Basariyla Eklendi");
         }
 
         public void dersSil(int DersID)
@@ -52,7 +52,17 @@ namespace Ders8
             var silDers = context.Ders.Where(x => x.DersID == DersID).FirstOrDefault();
             context.Ders.Remove(silDers);
             context.SaveChanges();
-            Console.WriteLine("Basariyla Silindi");
+            Console.WriteLine("Ders Basariyla Silindi");
+        }
+
+        public void DersGuncelle(int DersID, string DersKod, string DersAd)
+        {
+            OBSContext context = new OBSContext();
+            var dersGuncelle = context.Ders.Where(x=>x.DersID==DersID).FirstOrDefault();
+            dersGuncelle.DersKodu = DersKod;
+            dersGuncelle.DersAdi = DersAd;
+            context.SaveChanges();
+            Console.WriteLine("Ders Basariyla Guncellendi");
         }
     }
 }
