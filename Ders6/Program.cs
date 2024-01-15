@@ -11,6 +11,7 @@ namespace Ders6
         static void Main(string[] args)
         {
             Ogrenci ogrenci = new Ogrenci();
+            
             /*
             ogrenci.ad = "Betul";
             ogrenci.soyad = "Kara";
