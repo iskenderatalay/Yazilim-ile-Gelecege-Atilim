@@ -31,7 +31,7 @@ namespace Ders4
         */
 
         /*
-        //asiri Yukleme Overload
+        //Asiri Yukleme Overload
 
         public static int Topla()
         {
